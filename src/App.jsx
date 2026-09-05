@@ -1,18 +1,34 @@
+const Header = () => {
+  return <header>homework-05</header>
+}
+const MainContent = () => {
+  return (
+    <main>
+      Основная область страницы <Section />
+    </main>
+  )
+}
+
+const Section = () => {
+  return (
+    <section>
+      <h3>Заголовок секции</h3>
+      <p>Первый абзац статического текста.</p>
+      <p>Второй абзац статического текста.</p>
+    </section>
+  )
+}
+
+const Footer = () => {
+  return <footer>© 2026 Мой сайт. Все права защищены.</footer>
+}
+
 function App() {
   return (
     <>
-      <h1>homework-03</h1>
-      <p>Это учебный React-проект</p>
-      <h2>Проверка</h2>
-      <div>
-        <ol>
-          <li>1</li>
-          <li>2</li>
-        </ol>
-      </div>
-      <p>
-        <span>;fvtfjdnjndc</span>
-      </p>
+      <Header />
+      <MainContent />
+      <Footer />
     </>
   )
 }
