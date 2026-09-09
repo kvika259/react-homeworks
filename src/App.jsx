@@ -1,15 +1,15 @@
-import { MainContent, Section } from "./components/Content"
-import Footer from "./components/Footer"
-import Header from "./components/Header"
-
+import ColorText from './components/ColorText'
+import Counter from './components/Counter'
+import LiveInput from './components/LiveInput'
+import ToggleText from './components/ToggleText'
 
 function App() {
   return (
     <>
-      <Header />
-      <MainContent />
-      <Section />
-      <Footer />
+      <Counter />
+      <ToggleText />
+      <LiveInput />
+      <ColorText />
     </>
   )
 }
