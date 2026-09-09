@@ -1,13 +1,16 @@
-import Goods from './components/Goods'
-import List from './components/List'
-import UserProfile from './components/UserProfile'
+import ActionButton from './components/ActionButton'
+import ClickPractice from './components/ClickPractice'
+import FormPractice from './components/FormPractice'
+import InputPractice from './components/InputPractice'
 
 function App() {
   return (
     <>
-      <UserProfile />
-      <List />
-      <Goods />
+      <ClickPractice />
+      <InputPractice />
+      <FormPractice />
+      <ActionButton text={'Сохранить'} fn={() => console.log('Сохранено')} />
+      <ActionButton text={'Удалить'} fn={() => console.log('Удалено')} />
     </>
   )
 }
