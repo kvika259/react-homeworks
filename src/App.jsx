@@ -1,16 +1,33 @@
-import ActionButton from './components/ActionButton'
-import ClickPractice from './components/ClickPractice'
-import FormPractice from './components/FormPractice'
-import InputPractice from './components/InputPractice'
+import { useRef, useState } from 'react'
+import ListRef from './components/ListRef'
 
 function App() {
+  const [arr, setArr] = useState([])
+  const [text, setText] = useState('')
+
+  const inputRef = useRef()
+
+  const handleEnter = (e) => {
+    if (e.key == 'Enter') {
+      setArr((prev) => [...prev, e.target.value])
+      setText('')
+    }
+  }
+
+  const focusInput = () => {
+    inputRef.current.focus()
+  }
+
   return (
     <>
-      <ClickPractice />
-      <InputPractice />
-      <FormPractice />
-      <ActionButton text={'Сохранить'} fn={() => console.log('Сохранено')} />
-      <ActionButton text={'Удалить'} fn={() => console.log('Удалено')} />
+      <input
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+        onKeyDown={handleEnter}
+        ref={inputRef}
+      />
+      <button onClick={focusInput}>Фокус</button>
+      <ListRef arr={arr} setArr={setArr} />
     </>
   )
 }
