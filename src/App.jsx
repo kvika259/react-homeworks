@@ -1,9 +1,13 @@
-import ParentComponent from './components/ParentComponent'
+import Goods from './components/Goods'
+import List from './components/List'
+import UserProfile from './components/UserProfile'
 
 function App() {
   return (
     <>
-      <ParentComponent />
+      <UserProfile />
+      <List />
+      <Goods />
     </>
   )
 }
