@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import UserInfo from './UserInfo'
 
 function UserProfile() {
   const [user, setUser] = useState({
@@ -9,9 +10,8 @@ function UserProfile() {
   return (
     <div>
       <h3>Профиль пользователя</h3>
-      <p>Имя: {user.name}</p>
-      <p>Возраст: {user.age}</p>
-      <p>Активен: {user.isActive ? 'Активен' : 'Неактивен'}</p>
+      <UserInfo user={user} />
+
       <button onClick={() => setUser((prev) => ({ ...prev, name: 'Олег' }))}>
         Сменить имя
       </button>
