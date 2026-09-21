@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import TaskItem from './TaskItem'
 
 function List() {
   const [tasks, setTasks] = useState(['Купить хлеб', 'Погулять с собакой'])
@@ -8,7 +9,7 @@ function List() {
       <h3>Список задач</h3>
       <ul>
         {tasks.map((item, index) => (
-          <li key={index}>{item}</li>
+          <TaskItem key={index} item={item} />
         ))}
       </ul>
       <button onClick={() => setTasks((prev) => [...prev, 'Новая задача'])}>
